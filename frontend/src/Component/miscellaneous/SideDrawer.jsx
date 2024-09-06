@@ -31,6 +31,7 @@ import { Effect } from "react-notification-badge";
 import { getSender } from "../../config/ChatLogics";
 import UserListItem from "../userAvatar/UserListItem";
 import { ChatState } from "../../Context/ChatProvider";
+const ENDPOINT = "http://localhost:5000";
 
 function SideDrawer() {
   const [search, setSearch] = useState("");
@@ -78,7 +79,7 @@ function SideDrawer() {
       };
 
       const { data } = await axios.get(
-        `http://localhost:5000/api/user?search=${search}`,
+        `${ENDPOINT}/api/user?search=${search}`,
         config
       );
 
@@ -108,7 +109,7 @@ function SideDrawer() {
         },
       };
       const { data } = await axios.post(
-        `http://localhost:5000/api/chat`,
+        `${ENDPOINT}/api/chat`,
         { userId },
         config
       );
