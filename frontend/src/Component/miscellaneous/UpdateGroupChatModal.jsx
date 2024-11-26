@@ -30,7 +30,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
   const [loading, setLoading] = useState(false);
   const [renameloading, setRenameLoading] = useState(false);
   const toast = useToast();
-  const ENDPOINT = "http://localhost:5000";
+  const ENDPOINT = "https://chatapp-backend-5ikp.onrender.com";
 
   const { selectedChat, setSelectedChat, user } = ChatState();
 

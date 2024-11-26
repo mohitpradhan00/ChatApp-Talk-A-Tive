@@ -7,7 +7,7 @@ import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 // import { ChatState } from "../../Context/ChatProvider";
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://chatapp-backend-5ikp.onrender.com";
 
 const Login = () => {
   const [show, setShow] = useState(false);

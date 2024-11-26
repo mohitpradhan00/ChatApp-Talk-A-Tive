@@ -31,7 +31,7 @@ import { Effect } from "react-notification-badge";
 import { getSender } from "../../config/ChatLogics";
 import UserListItem from "../userAvatar/UserListItem";
 import { ChatState } from "../../Context/ChatProvider";
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://chatapp-backend-5ikp.onrender.com";
 
 function SideDrawer() {
   const [search, setSearch] = useState("");
