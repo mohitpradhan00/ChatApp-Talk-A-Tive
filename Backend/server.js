@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import userRoutes from "./routes/UserRoutes.js";
 import chatRoutes from "./routes/ChatRoutes.js";
-import messageRoutes from "./routes/MessageRoutes.js"; // Fixed the path
+import messageRoutes from "./routes/messageRoutes.js"; // Fixed the path
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js"; // Add .js extension
 import path from "path";
 import cors from "cors"; // Importing CORS
