@@ -10,6 +10,7 @@ import { Connectdb } from "./config/db.js"; // Ensure the correct import path
 import { fileURLToPath } from "url";
 
 dotenv.config();
+console.log("MongoDB URI:", process.env.MONGO_URI);
 Connectdb();
 const app = express();
 
