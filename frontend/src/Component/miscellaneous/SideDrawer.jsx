@@ -2,6 +2,7 @@ import { Button } from "@chakra-ui/button";
 import { useDisclosure } from "@chakra-ui/hooks";
 import { Input } from "@chakra-ui/input";
 import { Box, Text } from "@chakra-ui/layout";
+import { Badge } from "@chakra-ui/react"; 
 import {
   Menu,
   MenuButton,
@@ -26,8 +27,8 @@ import { useToast } from "@chakra-ui/toast";
 import ChatLoading from "../ChatLoading";
 import { Spinner } from "@chakra-ui/spinner";
 import ProfileModal from "./ProfileModal";
-import NotificationBadge from "react-notification-badge";
-import { Effect } from "react-notification-badge";
+// import NotificationBadge from "react-notification-badge";
+// import { Effect } from "react-notification-badge";
 import { getSender } from "../../config/ChatLogics";
 import UserListItem from "../userAvatar/UserListItem";
 import { ChatState } from "../../Context/ChatProvider";
@@ -155,11 +156,10 @@ function SideDrawer() {
         <div>
           <Menu>
             <MenuButton padding="1">
-              <NotificationBadge
-                count={notification.length}
-                effect={Effect.SCALE}
-              />
-              <BellIcon fontSize="2xl" margin="1" />
+              <Badge colorPalette={notification.length == 0 ? "" :"red"}>
+                {notification.length == 0 ? "" : notification.length}
+                <BellIcon fontSize="2xl" margin="1" />
+              </Badge>
             </MenuButton>
             <MenuList paddingLeft="2">
               {!notification.length && "No New Messages"}
@@ -215,7 +215,6 @@ function SideDrawer() {
             {loading ? (
               <ChatLoading />
             ) : (
-              
               Array.isArray(resultSearch) &&
               resultSearch.map((user) => (
                 <UserListItem
