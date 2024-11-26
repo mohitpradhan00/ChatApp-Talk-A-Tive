@@ -57,7 +57,7 @@ import { Server } from "socket.io";
 const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://chatapp-frontend-oya6.onrender.com",
     methods: ["GET", "POST"], // Add other methods if needed
     allowedHeaders: ["Content-Type", "Authorization"], // Add other headers if needed
     credentials: true,
